@@ -4,6 +4,7 @@ namespace: pkg-fogo-sh
 
 resources:
   - deployment.yaml
+  - service.yaml
 
 configMapGenerator:
   - name: config
