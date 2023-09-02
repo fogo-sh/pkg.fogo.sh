@@ -14,10 +14,19 @@ spec:
       labels:
         app: dieppe
     spec:
+      volumes:
+        - name: config
+          configMap:
+            name: config
+
       containers:
         - name: dieppe
           image: ghcr.io/nint8835/dieppe:latest
           imagePullPolicy: Always
+
+          volumeMounts:
+            - mountPath: /config
+              name: config
 
           ports:
             - name: http

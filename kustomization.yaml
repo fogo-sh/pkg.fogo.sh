@@ -4,3 +4,8 @@ namespace: pkg-fogo-sh
 
 resources:
   - deployment.yaml
+
+configMapGenerator:
+  - name: config
+    files:
+      - config.hcl
